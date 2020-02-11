@@ -62,13 +62,13 @@ Complete the following tasks:
   - [x] when adding a `task` the client must provide a description, the notes are optional.
   - [x] when adding a `task` the client must provide the `id` of an existing project.
   - [x] for `projects` and `tasks` if no value is provided for the `completed` property, the API should provide a default value of `false`.
-- [ ] Build an API with endpoints for:
-  - [ ] adding resources.
-  - [ ] retrieving a list of resources.
-  - [ ] adding projects.
-  - [ ] retrieving a list of projects.
-  - [ ] adding tasks.
-  - [ ] retrieving a list of tasks. **The list of tasks should include the project name and project description**.
+- [x] Build an API with endpoints for:
+  - [x] adding resources.
+  - [x] retrieving a list of resources.
+  - [x] adding projects.
+  - [x] retrieving a list of projects.
+  - [x] adding tasks.
+  - [x] retrieving a list of tasks. **The list of tasks should include the project name and project description**.
 
 ### Entities
 
@@ -98,51 +98,53 @@ A `task` one of the steps needed to complete the project. We want to store the f
 
 This section is **optional** and not counted towards MVP. Start working on it after you're done with the main assignment.
 
-Add an endpoint for retrieving a `project` by its `id` that returns an object with the following structure:
+- [ ] Add an endpoint for retrieving a `project` by its `id` that returns an object with the following structure:
 
-```js
-{
-  id: 1,
-  name: 'project name here',
-  description: 'the project description',
-  completed: false, // or true, the database will return 1 for true and 0 for false, extra code is required to convert a 1 to true and a 0 to false.
-  tasks: [
-    {
-      id: 1,
-      description: 'task description',
-      notes: 'the task notes',
-      completed: false // or true
-    },
-    {
-      id: 7,
-      description: 'another task description',
-      notes: 'the task notes',
-      completed: false // or true
-    }
-  ],
-  resources: [
-    {
-      id: 1,
-      name: 'Lambda Student',
-      description: 'a soon to be hired developer'
-    },
-    {
-      id: 2,
-      name: 'MacBook Pro #1'
-      description: 'an overly expensive laptop computer'
-    }
-  ]
-}
-```
+  ```js
+  {
+    id: 1,
+    name: 'project name here',
+    description: 'the project description',
+    completed: false, // or true, the database will return 1 for true and 0 for false, extra code is required to convert a 1 to true and a 0 to false.
+    tasks: [
+      {
+        id: 1,
+        description: 'task description',
+        notes: 'the task notes',
+        completed: false // or true
+      },
+      {
+        id: 7,
+        description: 'another task description',
+        notes: 'the task notes',
+        completed: false // or true
+      }
+    ],
+    resources: [
+      {
+        id: 1,
+        name: 'Lambda Student',
+        description: 'a soon to be hired developer'
+      },
+      {
+        id: 2,
+        name: 'MacBook Pro #1'
+        description: 'an overly expensive laptop computer'
+      }
+    ]
+  }
+  ```
 
-Add the remaining CRUD operations for projects and tasks.
+- [x] Add the remaining CRUD operations for projects and tasks.
 
-Use `knex` to add _data seeding_ scripts for projects and tasks.
+- [x] Use `knex` to add _data seeding_ scripts for projects and tasks.
 
-Add support for the concept of `contexts`. A context is something like _at home_, _at work_ or _at computer_. The idea is that some tasks require one or more `contexts` in order to be worked on. For example, the task of _file income taxes_ may require that you are _at home_, _at computer_ and _online_ so if you are _at work_ and look at the list of pending tasks you could do in your current context, filing your taxes will not be one of them.
+- [ ] Add support for the concept of `contexts`.
 
-A `context` can be applied to more than one `task`. An task can be tied to more than one context, like in the example above.
+  A context is something like _at home_, _at work_ or _at computer_. The idea is that some tasks require one or more `contexts` in order to be worked on. For example, the task of _file income taxes_ may require that you are _at home_, _at computer_ and _online_ so if you are _at work_ and look at the list of pending tasks you could do in your current context, filing your taxes will not be one of them.
 
-When retrieving an `task` by _id_, add a property that lists all the `contexts` related to that task.
+  A `context` can be applied to more than one `task`. An task can be tied to more than one context, like in the example above.
+
+- [ ] When retrieving an `task` by _id_, add a property that lists all the `contexts` related to that task.
 
 _Good luck and have fun!_
