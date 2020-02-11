@@ -38,13 +38,17 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain the difference between `Relational Databases` and `SQL`.
+- [x] Explain the difference between `Relational Databases` and `SQL`.
+  - Relational Database Management Systems (RDBMs) are software systems used to store and access data, while Structured Query Language (SQL) is the language family used to access and manipulate the data within the RDBMs.
 
-- [ ] Why do tables need a `primary key`?
+- [x] Why do tables need a `primary key`?
+  - To have a value separate from the record data used to access/update the record uniquely.
 
-- [ ] What is the name given to a table column that references the primary key on another table.
+- [x] What is the name given to a table column that references the primary key on another table.
+  - Foreign Key.
 
-- [ ] What do we need in order to have a _many to many_ relationship between two tables.
+- [x] What do we need in order to have a _many to many_ relationship between two tables.
+  - A bridge or intermediate table.
 
 ## Minimum Viable Product
 
