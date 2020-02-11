@@ -3,8 +3,8 @@ exports.seed = function(knex) {
   //   .then(function () {
       return knex('projects').insert([
         {
-          name: 'Test Project',
-          description: 'Test Project Description'
+          name: 'Default Project',
+          description: 'Default Project Description'
         }
       ]);
   // });

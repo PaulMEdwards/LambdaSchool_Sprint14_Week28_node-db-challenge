@@ -2,11 +2,8 @@ exports.up = function(knex) {
   return knex.schema
     .createTable('projects', tbl => {
       tbl.increments();
-      // tbl.integer('resource')
-      //   .unsigned()
-      //   .references('project.id');
-      tbl.integer('tasks')
-        .unsigned();
+      // tbl.integer('tasks')
+      //   .unsigned();
       tbl.text('name')
         // .unique() //not a requirement, but a good idea
         .notNullable();
